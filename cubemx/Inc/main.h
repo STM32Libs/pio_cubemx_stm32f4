@@ -27,6 +27,10 @@
 extern "C" {
 #endif
 
+extern void setup(void);
+extern void loop(void);
+
+
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
