@@ -4,8 +4,9 @@
             "-I ./include",
             "-I ./cubemx/Inc",
             "-I ./cubemx/Core/Inc",
-            "-I ./cubemx/Drivers/STM32F4xx_HAL_Driver/Inc"
+            "-I ./cubemx/Drivers/STM32F4xx_HAL_Driver/Inc",
+            "-T ../ldscripts/STM32F411CEUX_FLASH.ld"
         ]
     },
-    "src_filter":"+<Src/> +<Source/>"
+    "src_filter":"+<Src/> +<Source/> +<Startup/>"
 }
