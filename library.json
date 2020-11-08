@@ -1,12 +1,28 @@
 {
+    "name":"cube_main_f4",
+    "version":"1.0.0",
+    "description" : "a cubemx project library for easy integration of regenerated files out of a .ioc project",
+    "keywords":"STM32F4, CubeMX, RCC, Clock, HAL",
+    "license":"BSD",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/STM32Libs/pio_cubemx_stm32f4.git"
+    },
+    "authors":[
+        {
+            "name":"wassfila",
+            "url":"https://github.com/wassfila"
+        },
+        {
+            "name":"STMicroelectronics CubeMX",
+            "url":"https://www.st.com/en/development-tools/stm32cubemx.html"
+        }
+    ],
     "build":{
         "flags": [
             "-I ./include",
-            "-I ./cubemx/Inc",
-            "-I ./cubemx/Core/Inc",
-            "-I ./cubemx/Drivers/STM32F4xx_HAL_Driver/Inc",
-            "-T ../ldscripts/STM32F411CEUX_FLASH.ld"
+            "-I ./cubemx/Core/Inc"
         ]
     },
-    "src_filter":"+<Src/> +<Source/> +<Startup/>"
+    "src_filter":"+<Src/>"
 }
