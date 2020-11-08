@@ -2,6 +2,15 @@
 CubeMX project integration in platformio as a library for the Black pill board with STM32F4
 The goal is to habe a .ioc project that can regenerate the library and easily keep using it from a pio project
 
+# steps required after regeneration
+although the goal would be to have no manual steps, currently still some actions are required
+* delete Drivers folder
+* merge `main.c`
+* revert `main.h`
+
+TODO take the main outside and generate without main
+TODO check generation with Makefile project
+
 # generated HAL vs pio HAL
 * `stm32f4xx_hal_conf.h` in `.platformio\packages\framework-stm32cube\f4\Drivers\STM32F4xx_HAL_Driver\Inc\`
 * pio HAL has everything enabled
