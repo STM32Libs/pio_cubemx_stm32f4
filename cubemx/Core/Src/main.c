@@ -178,6 +178,19 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wimplicit-function-declaration"
+//This implicit declaration is intended to isolate libraries that should not necessarily dependon each other
+//main => i2s
+//only in case of i2s usage, will this function be triggered after DMA activation, and then forwarded to the right lib
+//the reason why this is not declared on the i2s lib is that the _weak creation on start up '.s' does not link to a difefrent lib
+void DMA1_Stream3_IRQHandler(void)
+{
+  I2sApp_DMA1_Stream3_IRQHandler();
+}
+
+#pragma GCC diagnostic pop
+
 void SysTick_Handler(void) {
   HAL_IncTick();
 }
